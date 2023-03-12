@@ -41,7 +41,7 @@ mongoose.connect(`mongodb://localhost:27017/musicPlayer`,{
         // DB connected
         console.log('DB Connected')
         // Starting the server
-        const serverPort = 8000;
+        const serverPort = process.env.PORT || 8000;
         app.listen(serverPort, (err) => {
             if(err){
                 console.log(`Server not started due to following error:\n${err.message}`)
